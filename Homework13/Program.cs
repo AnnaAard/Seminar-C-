@@ -17,7 +17,7 @@ while (num > 999)
 return num % 10;
 }
 
-int number = new Random().Next(-99, 99);
+int number = new Random().Next(-9999, 99999);
 int result = GetNumber(number);
 if(number < -99 || number> 99)
 {
