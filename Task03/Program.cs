@@ -4,7 +4,7 @@
 // 5 -> Пятница
 
 Console.WriteLine("Введите число от 1 до 7");
-string day = Console.ReadLine();
+string day = (Console.ReadLine());
 if (day == "1")
 {
     Console.WriteLine("Понедельник");
