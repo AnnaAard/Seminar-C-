@@ -3,43 +3,43 @@
 // 1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 6, 1, 33]
 
 
-void FullArray (int[] array)
+void FullArray(int[] array)
 {
     int length = array.Length;
     int index = 0;
-    while (index<length)
+    while (index < length)
     {
         array[index] = new Random().Next(0, 99);
         index++;
     }
 }
 
-void PrintArray (int[] mass)
+void PrintArray(int[] mass)
 {
     int length = mass.Length;
     int i = 0;
-    while (i<length)
+    while (i < length)
     {
-         Console.Write($" {mass[i]},");
-         i++;
+        Console.Write($" {mass[i]},");
+        i++;
     }
 }
-void PrintArray2 (int[] mass)
+void PrintArray2(int[] mass)
 {
     int length = mass.Length;
     int i = 0;
     Console.Write($"  =>  [");
-    while (i<length)
+    while (i < length)
     {
-         Console.Write($" {mass[i]}");
-         i++;
+        Console.Write($" {mass[i]}");
+        i++;
     }
     Console.Write("]");
 }
 
 
 
-int[] array = new int [8];
+int[] array = new int[8];
 FullArray(array);
 PrintArray(array);
 PrintArray2(array);

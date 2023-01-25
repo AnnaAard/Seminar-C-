@@ -10,8 +10,8 @@ int SumDigit(int num)
     while (num > 0)
     {
         int lastDigit = num % 10;
-        num = num/10;
-        sum = sum+lastDigit;
+        num = num / 10;
+        sum = sum + lastDigit;
     }
     return sum;
 }
