@@ -7,6 +7,7 @@
 int SumDigit(int num)
 {
     int sum = 0;
+    if (num < 0) num = num * -1;
     while (num > 0)
     {
         int lastDigit = num % 10;
