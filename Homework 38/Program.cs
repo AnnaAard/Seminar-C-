@@ -39,11 +39,15 @@ double MinMaxDifference(double[] array)
         if (array[i] < min) min = array[i];
         if (array[i] > max) max = array[i];
     }
+    
+    Console.WriteLine($"Максимальное число {max} минимальное число {min}");
     return max - min;
+    ;
 }
 
 double[] arr = CreateArrayDouble(10, 1, 10);
 PrintArrayDouble(arr);
 
 double difference = MinMaxDifference(arr);
-Console.WriteLine(Math.Round(difference, 2));
+Console.WriteLine($"Разница {(Math.Round(difference, 2))}");
+
