@@ -12,23 +12,24 @@ Console.WriteLine("Введите координаты  первой точки 
 double b1 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите координаты  второй точки прямой B");
 double b2 = Convert.ToDouble(Console.ReadLine());
-if (k1 * b2 - k2 * b1 == 0) //Проверка на параллельность
+//Проверка на параллельность
+if (k1 * b2 - k2 * b1==0)
 {
-    Console.WriteLine("Заданные прямые не пересекаются");
+Console.WriteLine("Заданные прямые не пересекаются");
 }
 else
 {
-    Console.WriteLine($"Координаты точки пересечения -> ");
-double[] arrayResult = new double[2];
-PointsCoordinates(k1, k2, b1, b2);
+Console.WriteLine($"Координаты точки пересечения -> ");
+double[] arrayResult=PointsCoordinates(k1, k2, b1, b2);
 PrintPoint(arrayResult);
-
+}
 
 double[] PointsCoordinates(double x1, double x2, double y1, double y2)
 {
-    arrayResult[0] = Math.Round((y2 - y1) / (x1 - x2),2);
-    arrayResult[1] = Math.Round((x1 * arrayResult[0] + y1),2);
-    return arrayResult;
+    double[] arrayRes = new double[2];
+    arrayRes[0] = Math.Round((y2 - y1) / (x1 - x2), 2);
+    arrayRes[1] = Math.Round((x1 * arrayRes[0] + y1), 2);
+    return arrayRes;
 }
 
 void PrintPoint(double[] arrayResult)
@@ -40,5 +41,4 @@ void PrintPoint(double[] arrayResult)
         else Console.Write($" {arrayResult[i]}");
     }
     Console.WriteLine("]");
-}
 }
